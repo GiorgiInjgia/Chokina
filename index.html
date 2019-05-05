@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Chokina's Shawarma</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <link href='https://fonts.googleapis.com/css?family=Bilbo Swash Caps' rel='stylesheet'>
+  </head>  
+
+
+<body>
+
+    <header class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="menu.html">menu</a>
+      <a href="#home" target="_blank"><img class="chok" src="choki.png"></a>
+      <a href="about.html">About Us</a>
+      <a href="order.html">Order</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">menu</a>
+    </header>
+
+
+<br>
+
+<div class="man">
+ 
+    <
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img class="img" src="img/slide_1.jpg" >
+        
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img class="img" src="img/slide_2.jpg" >
+        
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img class="img" src="img/slide_4.jpg" >
+        
+      </div>
+
+     
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <br>
+
+<div class="main-area">
+  <img id="bg" src="img/bg_2.jpg" style="width:100%">
+  
+   <p id="intro"><b>Chokinas Shawarma</b></p>
+      <p id="intro1"><b>Chokinas Shawarma is a unique fast casual <br> restaurant concept serving a variety of <br>Shawarma’s and other sandwiches.</b></p>
+     <p id="intro2"><b>It is a concept inspired by the traditional <br> Arabic shawarma and its fusion with various <br> culinary traditions.</b></p>
+      <p id="intro3"><b>We offer a simple menu of great food prepared <br> fresh each day, and then serve the food quickly <br> in a stylish and contemporary atmosphere.</b></p> 
+</div>
+<div class="our-menu">
+  <p id="menu">Our Menu</p>
+<hr>
+  <div>
+    <p id="shaw-sandw">Authentic <br> Shawarma<br> Sandwiches</p>  
+    <div class="swipe">
+      <img class="min-img" src="img/s1.jpg">
+      <img class="min-img" src="img/s2.jpg">
+      <img class="min-img" src="img/s3.jpg">
+    </div>
+  </div>
+
+  <div>
+    <p id="Sign-sandw">Signature <br> Sandwiches</p>
+    <div class="swipe">
+      <img class="min-img" src="img/c1.jpg">
+      <img class="min-img" src="img/c2.jpg">
+      <img class="min-img" src="img/c3.png">
+    </div>
+  </div>
+
+  <div>
+    <p id="shaw-plat">Shawarma <br> Platters</p>
+    <div class="swipe">
+      <img class="min-img" src="img/x1.jpg">
+      <img class="min-img" src="img/x2.jpg">
+      <img class="min-img" src="img/x3.jpg">
+    </div>
+  </div>
+  <hr>
+</div>
+
+<script type="text/javascript">
+  var slideIndex = 0;
+showSlides();
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+ </script>
+
+<script type="text/javascript">
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+<footer>
+  <p id="po" align="center"><em>Made By</em></p>
+  <div class="us">
+        <div class="info" align="center">
+        <p><em>Badri Tatarashvili</em></p>
+        <p><em>Ocupation: Student</em></p>
+        <p><em>Faculty: Computer technologies and Engineering</em></p>
+      </div>
+    </div>
+      <div class="info" align="center">
+        <p><em>Giorgi Injgia</em></p>
+        <p><em>Ocupation: Student</em></p>
+        <p><em>Faculty: Computer technologies and Engineering</em></p>
+      </div>
+      <br />
+      <br />
+  <p id="pp" align="center">&copy;<em>All Rights Reserved by Giorgi & Bacho,2018&trade;</em></p>
+</footer>
+</body>
+</html>

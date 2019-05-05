@@ -1,0 +1,88 @@
+body
+{
+
+    background-image: url("bg_4.jpg");
+    background-size:cover;
+    width: 100%;
+   
+}
+.row
+{
+    background-image: url("rows.jpg");
+    background-size: cover;
+	margin-top:15px;
+	margin-bottom:15px;
+	padding:5px;
+    height:480px;
+	min-width:100%;
+    top: 120px;
+    position: relative;
+}
+.menu{
+    margin-top:100px;
+    position: relative;
+}
+#logo
+{
+position: absolute;
+top: 20px;
+left: 45%;
+font-size: 32px;
+font-family: 'Italianno';
+}
+
+.images{
+    width: 500px;
+    height: 380px;
+}
+.left-img{
+    float: left;
+    width: 45%;
+    height:370px;
+    padding:20px;
+    margin-left:0px;
+}
+.c {
+    float: left;
+    width: 50%;
+    height:370px;
+    padding:10px;
+    margin-left:0px;
+    font-size: 22px;
+    font-family: 'Bilbo Swash Caps';
+}
+
+@media screen and (max-width: 1080px) {
+  .c{
+    position: absolute;
+    margin-top: 0;
+    margin-left: 50%;
+    z-index: 1;
+    font-size: 17px;
+}
+  }
+
+.list
+{
+	margin:25px;
+}
+
+p{
+	padding:20px;
+}
+
+h2{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 720px) {
+    .row .c{
+        font-size:12px;
+    }
+    .images{
+        height:200px;
+        width:200px;
+    }
+}
+
+
